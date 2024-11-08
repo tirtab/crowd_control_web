@@ -8,7 +8,7 @@ app = Flask(__name__)
 detector = YOLOv11CrowdDetector()
 
 # Baca input video dari webcam
-camera = cv2.VideoCapture(1)  # Bisa diubah ke ID kamera atau URL stream
+camera = cv2.VideoCapture(0)  # Bisa diubah ke ID kamera atau URL stream
 
 
 def generate_frames():
