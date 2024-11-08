@@ -14,7 +14,7 @@ camera = cv2.VideoCapture(0)  # Bisa diubah ke ID kamera atau URL stream
 def generate_frames():
     while True:
         # Baca frame dari kamera
-        success, frame = camera.read()
+        success, frame = camera.read(0)
         if not success:
             break
 
