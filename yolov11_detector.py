@@ -20,7 +20,7 @@ class YOLOv11CrowdDetector:
 
         # Load model OpenVINO
         # det_model_path = Path("model/best_openvino_model/best.xml")
-        det_model_path = Path("model/best_openvino_model(Yolov11m)/best.xml")
+        det_model_path = Path("model/crowd_control 12_openvino_model/best.xml")
         core = ov.Core()
         det_ov_model = core.read_model(det_model_path)
 
@@ -71,6 +71,8 @@ class YOLOv11CrowdDetector:
             for class_name, confidence
             in zip(detections['class_name'], detections.confidence)
         ]
+
+        print(labels)
 
         frame = self.box_annotator.annotate(scene=frame, detections=detections)
         frame = self.label_annotator.annotate(scene=frame, detections=detections, labels=labels)
