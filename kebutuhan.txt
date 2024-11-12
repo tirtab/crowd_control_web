@@ -1,0 +1,6 @@
+supervision
+ultralytics
+openvino
+opencv-python
+flask
+pathlib

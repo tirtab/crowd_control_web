@@ -1,4 +1,3 @@
-import cv2
 import numpy as np
 import supervision as sv
 from ultralytics import YOLO
@@ -19,8 +18,7 @@ class YOLOv11CrowdDetector:
         self.frame_height = 480
 
         # Load model OpenVINO
-        # det_model_path = Path("model/best_openvino_model/best.xml")
-        det_model_path = Path("model/crowd_control 12_openvino_model/best.xml")
+        det_model_path = Path("model/best_openvino_model/best.xml")
         core = ov.Core()
         det_ov_model = core.read_model(det_model_path)
 
