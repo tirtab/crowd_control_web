@@ -1,0 +1,10 @@
+supervision
+ultralytics
+openvino
+opencv-python
+flask
+gunicorn
+flask-mqtt
+orjson
+numpy
+pillow
